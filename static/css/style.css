@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=IM+Fell+English&display=swap');
+
+:root {
+  --bg-ana: #0a0608;
+  --bg-panel: #12080f;
+  --bg-kart: #1a0d17;
+  --kirmizi: #8b0000;
+  --kirmizi-parlak: #c41e1e;
+  --gold: #c9a84c;
+  --metin-ana: #e8dcc8;
+  --metin-ikincil: #9a8a7a;
+  --sinir: #3d1f2d;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-ana);
+  color: var(--metin-ana);
+  font-family: 'IM Fell English', serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#karakter-secim-ekrani,
+#oyun-ekrani,
+#olum-ekrani {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* EKRAN 1: Karakter Seçim */
+#karakter-secim-ekrani h1 {
+  font-family: 'Cinzel', serif;
+  color: var(--gold);
+  text-align: center;
+  font-size: 3rem;
+  text-shadow: 0 0 10px var(--kirmizi);
+  margin-bottom: 10px;
+}
+
+.alt-baslik {
+  font-family: 'IM Fell English', serif;
+  color: var(--metin-ikincil);
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.karakter-kartlari {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.karakter-karti {
+  background-color: var(--bg-kart);
+  border: 1px solid var(--sinir);
+  border-radius: 8px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.karakter-karti:hover {
+  background-color: rgba(26, 13, 23, 0.8);
+  border-color: var(--kirmizi);
+  box-shadow: 0 0 15px var(--kirmizi);
+}
+
+.kart-ikon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.kart-isim {
+  font-family: 'Cinzel', serif;
+  color: var(--gold);
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.kart-aciklama {
+  font-family: 'IM Fell English', serif;
+  color: var(--metin-ikincil);
+  font-size: 0.9rem;
+}
+
+/* EKRAN 2: Oyun Ekranı */
+#karakter-bilgi-paneli {
+  background-color: var(--bg-panel);
+  border-bottom: 2px solid var(--gold);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+#karakter-adi {
+  font-family: 'Cinzel', serif;
+  color: var(--gold);
+  font-size: 1.8rem;
+}
+
+#karakter-arkaplan {
+  color: var(--metin-ikincil);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+#karakter-dt {
+  color: var(--metin-ikincil);
+  font-size: 0.9rem;
+}
+
+#hikaye-kutusu {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--sinir);
+  border-radius: 5px;
+  min-height: 300px;
+  padding: 15px;
+  margin-bottom: 20px;
+  font-family: 'IM Fell English', serif;
+  line-height: 1.6;
+}
+
+#hikaye-kutusu p {
+  margin-bottom: 10px;
+  animation: fadeIn 0.5s ease;
+}
+
+#hikaye-kutusu p:last-child {
+  color: var(--metin-ana);
+}
+
+#yukleniyor-gostergesi {
+  text-align: center;
+  color: var(--kirmizi);
+  margin: 10px 0;
+  font-family: 'Cinzel', serif;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.4; }
+  50% { opacity: 1; }
+  100% { opacity: 0.4; }
+}
+
+#aksiyonlar-konteyner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.aksiyon-btn {
+  background-color: var(--bg-kart);
+  border: 1px solid var(--gold);
+  color: var(--metin-ana);
+  padding: 12px 20px;
+  font-family: 'IM Fell English', serif;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.aksiyon-btn:hover:not(:disabled) {
+  background-color: var(--kirmizi);
+  border-color: var(--kirmizi-parlak);
+}
+
+.aksiyon-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* EKRAN 3: Ölüm Ekranı */
+#olum-ekrani {
+  text-align: center;
+  padding-top: 100px;
+}
+
+#olum-ekrani h1 {
+  font-family: 'Cinzel', serif;
+  color: var(--kirmizi);
+  font-size: 3rem;
+  margin-bottom: 30px;
+  text-shadow: 0 0 20px rgba(139, 0, 0, 0.5);
+}
+
+#son-sahne {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--sinir);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0 auto 30px;
+  max-width: 600px;
+  text-align: left;
+  max-height: 300px;
+  overflow-y: auto;
+  font-family: 'IM Fell English', serif;
+  line-height: 1.6;
+}
+
+#yeniden-basla-btn {
+  background-color: var(--kirmizi);
+  border: 2px solid var(--gold);
+  color: var(--metin-ana);
+  padding: 15px 40px;
+  font-family: 'Cinzel', serif;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#yeniden-basla-btn:hover {
+  background-color: var(--kirmizi-parlak);
+  box-shadow: 0 0 15px var(--kirmizi);
+}
+
+/* Scrollbar özelleştirme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-ana);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--kirmizi);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--kirmizi-parlak);
+}
+
+/* Animasyon */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

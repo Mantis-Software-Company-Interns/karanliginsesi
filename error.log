@@ -1,0 +1,36 @@
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 423-260-126
+ * Detected change in 'C:\\Users\\nazif\\OneDrive\\Masaüstü\\karanliginsesi\\app.py', reloading
+Exception in thread Thread-1 (serve_forever):
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 423-260-126
+127.0.0.1 - - [08/May/2026 11:03:32] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/May/2026 11:03:32] "GET /static/js/game.js HTTP/1.1" 304 -
+127.0.0.1 - - [08/May/2026 11:03:32] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [08/May/2026 11:03:36] "POST /api/start HTTP/1.1" 500 -
+127.0.0.1 - - [08/May/2026 11:04:09] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/May/2026 11:04:09] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [08/May/2026 11:04:09] "GET /static/js/game.js HTTP/1.1" 304 -
+127.0.0.1 - - [08/May/2026 11:04:13] "POST /api/start HTTP/1.1" 500 -
+127.0.0.1 - - [08/May/2026 11:04:17] "POST /api/start HTTP/1.1" 500 -
+127.0.0.1 - - [08/May/2026 11:04:30] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [08/May/2026 11:04:30] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [08/May/2026 11:04:41] "POST /api/start HTTP/1.1" 500 -
+127.0.0.1 - - [08/May/2026 11:10:30] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/May/2026 11:10:31] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [08/May/2026 11:10:31] "GET /static/js/game.js HTTP/1.1" 304 -
+127.0.0.1 - - [08/May/2026 11:10:31] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [08/May/2026 11:10:35] "POST /api/start HTTP/1.1" 500 -
+127.0.0.1 - - [08/May/2026 11:11:06] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/May/2026 11:11:06] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [08/May/2026 11:11:06] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [08/May/2026 11:11:06] "GET /static/js/game.js HTTP/1.1" 304 -
+127.0.0.1 - - [08/May/2026 11:11:07] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/May/2026 11:11:08] "GET /static/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [08/May/2026 11:11:08] "GET /static/js/game.js HTTP/1.1" 304 -
+127.0.0.1 - - [08/May/2026 11:11:08] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -

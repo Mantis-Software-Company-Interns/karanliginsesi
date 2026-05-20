@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karanlığın Sesi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- EKRAN 1: Karakter Seçim Ekranı -->
+    <div id="karakter-secim-ekrani">
+        <h1>Karanlığın Sesi</h1>
+        <p class="alt-baslik">Hangi karanlığı seçersin?</p>
+        <div class="karakter-kartlari">
+            <div class="karakter-karti" data-tur="vampir">
+                <div class="kart-ikon">🧛</div>
+                <div class="kart-isim">Vampir</div>
+                <div class="kart-aciklama">Bin yıllık, soğuk ve aristokrat bir varlık.</div>
+            </div>
+            <div class="karakter-karti" data-tur="dedektif">
+                <div class="kart-ikon">🔍</div>
+                <div class="kart-isim">Dedektif</div>
+                <div class="kart-aciklama">1920'ler İstanbul'unda paranormal vakalar çözen yorgun bir dedektif.</div>
+            </div>
+            <div class="karakter-karti" data-tur="cadi">
+                <div class="kart-ikon">🧙‍♀️</div>
+                <div class="kart-isim">Cadı</div>
+                <div class="kart-aciklama">Anadolu dağlarında doğayla bağlantılı güçlü bir büyücü.</div>
+            </div>
+            <div class="karakter-karti" data-tur="hayalet">
+                <div class="kart-ikon">👻</div>
+                <div class="kart-isim">Hayalet</div>
+                <div class="kart-aciklama">Anılarını kaybetmiş, dünyaya bağlı kalmış huzursuz bir ruh.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EKRAN 2: Oyun Ekranı -->
+    <div id="oyun-ekrani" style="display: none;">
+        <div id="karakter-bilgi-paneli">
+            <div id="karakter-adi"></div>
+            <div id="karakter-arkaplan"></div>
+            <div id="karakter-dt"></div>
+        </div>
+        <div id="hikaye-kutusu"></div>
+        <div id="yukleniyor-gostergesi" style="display: none;">Yükleniyor...</div>
+        <div id="aksiyonlar-konteyner">
+            <button id="aksiyon-btn-0" class="aksiyon-btn"></button>
+            <button id="aksiyon-btn-1" class="aksiyon-btn"></button>
+            <button id="aksiyon-btn-2" class="aksiyon-btn"></button>
+        </div>
+    </div>
+
+    <!-- EKRAN 3: Ölüm Ekranı -->
+    <div id="olum-ekrani" style="display: none;">
+        <h1>Karanlık Seni Yuttu</h1>
+        <div id="son-sahne"></div>
+        <button id="yeniden-basla-btn">Yeniden Uyan</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+</body>
+</html>
